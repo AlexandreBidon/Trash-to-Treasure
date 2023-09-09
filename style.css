@@ -1,0 +1,653 @@
+@font-face{
+    font-family: 'Pretty Pastel';
+    src: url('font/cookies.eot');
+    src: url('font/cookies.eot?#iefix') format('embedded-opentype'),
+    url('font/cookies.woff') format('woff'),
+    url('font/cookies.ttf') format('truetype'),
+    url('font/cookies.svg#webfont') format('svg');
+    }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Pretty Pastel';
+	color: white;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+	background-color: white;
+	user-select: none;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+@keyframes float2 {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-3vh);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+#start_menu .title {
+    text-align: center;
+    height: 20%;
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+}
+
+.title img {
+    height: 100%;
+}
+
+.subtitle {
+    font-size: 4vw;
+}
+
+#start_menu {
+    background-color: #bd6054;
+}
+
+#how_to_play {
+    background-color: #d17164;
+    position: relative;
+}
+
+#how_to_play .page_title {
+    position: absolute;
+    font-size: 3vw;
+    top: 3%;
+    left: 3%
+
+}
+
+#how_to_play .info_panel {
+    position: absolute;
+    top: 11%;
+    bottom: 16%;
+    left: 3%;
+    right: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info_panel .row {
+    height: 49%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.info_panel .section {
+    position: relative;
+    width: 49.5%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #d6867b;
+    border-radius: 5%/10%;
+    overflow: hidden;
+}
+
+.info_panel .section .picture {
+    display: flex;
+    align-items: center;
+    background-color: #dd9187;
+    height: 100%;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture img {
+    max-width: 90%;
+    max-height: 90%;
+    min-width: 65%;
+    position: relative;
+}
+
+
+
+.info_panel .section .text {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1.5%;
+}
+
+.text .title {
+    font-size: 2vw;
+    color: white;
+}
+
+.text .description {
+    margin-top: 2%;
+    font-size: 1vw;
+    color: #f7ddd4;
+}
+
+#how_to_play .play_button {
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+    font-size: 4vw;
+    animation: float2 6s ease-in-out infinite;
+}
+
+#how_to_play .play_button:hover{
+	font-size: 5vw;
+}
+
+.start_center {
+	width: 100%;
+	height: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    font-size: 3vw;
+    transition: all 0.2s ease-out;
+    z-index: 4;
+}
+
+
+.start_center:hover{
+	font-size: 4vw;
+}
+
+.start-character {
+    position: absolute;
+    height: 50%;
+    aspect-ratio: 1;
+    top: 20%;
+    left: 8%;
+    transform: rotate(352deg);
+}
+
+.start-character img {
+    height: 100%;
+}
+
+.start-backdrop {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 70%;
+    background-image: url("./img/backdrop/test.png");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: contain;
+    opacity: 0.5;
+}
+
+custom-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 10%;
+    background-color: #bd6054;
+}
+
+.header_menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 10%;
+    background-color: #bd6054;
+}
+
+.header_right {
+    display: flex;
+    height: 100%;
+    width: 23%;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vw;
+}
+
+.header_left {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.header_button {
+    background: rgb(255, 123, 106);
+    padding: 2%;
+    border-radius: 5px;
+}
+
+.header_button:hover {
+    font-size: 2.2vw;
+}
+
+
+
+.main_museum {
+    width: 100%;
+    height: 90%;
+    position: relative;
+}
+
+.main_museum .backdrop {
+    height: 100%;
+    width: 100%;
+}
+
+.main_museum .upgrade-backdrop {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.main_museum .trash-area-tree {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top:22%;
+    bottom: 12%;
+    left: 0%;
+    right: 87%;
+}
+
+.main_museum .trash-area-light {
+    display: none;
+    position: absolute;
+    top:8%;
+    bottom: 50%;
+    left: 0%;
+    right: 70%;
+}
+
+.main_museum .trash-area {
+    position: absolute;
+    top:41%;
+    bottom: 10%;
+    left: 5%;
+    right: 72%;
+    z-index: 4;
+}
+
+.main_museum .desk-area {
+    position: absolute;
+    top:38%;
+    bottom: 16%;
+    left: 32.6%;
+    right: 39.5%;
+    z-index: 2;
+}
+
+.main_museum .desk-area-raccoon {
+    position: absolute;
+    top:45%;
+    bottom: 35%;
+    left: 43%;
+    right: 50%;
+
+}
+
+.main_museum .wall-area {
+    position: absolute;
+    top:0%;
+    bottom: 0%;
+    left: 24.8%;
+    right: 67.4%;
+    z-index: 3;
+    
+}
+
+.main_museum .modern-painting {
+    position: absolute;
+    display: none;
+    top:0%;
+    bottom: 0%;
+    left: 61.8%;
+    right: 27.4%;
+    z-index: 1;
+}
+
+.main_museum .three-d-painting {
+    position: absolute;
+    display: none;
+    top:0%;
+    bottom: 0%;
+    left: 77%;
+    right: 7%;
+    z-index: 1;
+}
+
+.main_museum .carpet {
+    position: absolute;
+    display: none;
+    top:0%;
+    bottom: 0%;
+    left: 43.3%;
+    right: 14%;
+    z-index: 1;
+}
+
+.main_museum .pirate-painting {
+    position: absolute;
+    display: none;
+    top:0%;
+    bottom: 0%;
+    left: 9%;
+    right: 76%;
+    z-index: 0;
+}
+
+.main_museum .craft-book-area {
+    position: absolute;
+    top:57%;
+    bottom: 16.5%;
+    right: 15.8%;
+    left: 74.7%;
+    z-index: 2;
+}
+
+.main_museum .upgrade-area {
+    position: absolute;
+    top:68%;
+    bottom: 14%;
+    right: 3%;
+    left: 85%;
+    z-index: 2;
+}
+
+.main_museum .clikeable_area:hover {
+    transform: scale(1.05);
+}
+
+.main_museum .clikeable_area .text {
+    top: -12%;
+    position: absolute;
+    display: none;
+    width: 100%;
+    text-align: center;
+    font-size: 2vh;
+    text-shadow:
+    -0.08vw -0.08vw 0 #000,
+    0.08vw -0.08vw 0 #000,
+    -0.08vw 0.08vw 0 #000,
+    0.08vw 0.08vw 0 #000; 
+}
+
+.main_museum .clikeable_area:hover .text {
+    display: block;
+    animation: float 5s ease-in-out infinite;
+}
+
+
+.footer_menu {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    background-color: #bd6054;
+}
+
+.footer_menu .footer_button {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    transition: all 0.25s ease-out;
+    background-color: #d37569;
+    font-size: 2vw;
+}
+
+.footer_menu .footer_button:hover{
+    background-color: #e6887c;
+    margin: 0;
+}
+
+.main_area_canvas {
+    height: 90%;
+    width: 100%;
+}
+
+.area-name {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    background-color:#e2a79a;
+}
+
+.area-name .area-title {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vh;
+}
+
+.art_area_split {
+    display: flex;
+    height: 95%;
+    width: 100%;
+}
+
+.art_area_split .split_area {
+    width: 50%;
+    height: 100%;
+}
+
+.inventory-background {
+    height: 100%;
+    width: 100%;
+    background-color: #db8f73;
+    overflow-y: scroll;
+}
+
+.inventory {
+    width: 100%;
+    background-color: #db8f73;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 2%;
+}
+
+.inventory .item {
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inventory .item .item-icon {
+    background-color: #e8b9a7;
+    width: 95%;
+    height: 95%;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.inventory .item .item-number {
+    position: absolute;
+    display: flex;
+    right: -3%;
+    top: -3%;
+    background-color: #cc9884;
+    height: 4vh;
+    width: 4vh;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.inventory .item .item-icon img {
+    width: 70%;
+    height: 70%;
+}
+
+.inventory .item .item-icon div {
+    font-size: 3vh;
+}
+
+.inventory .item .item-icon:hover {
+    transform: scale(1.05);
+}
+
+.loading-screen {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 15vh;
+    background-color: #df9e86;
+}
+
+#craft-canvas {
+    background-color: #df9e86;
+  }
+
+#trash-loot-canvas {
+background-color: #df9e86;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #c27f66;
+    }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #e79374;
+    }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(238, 151, 119);
+    }
+
+.upgrade-background {
+    height: 100%;
+    width: 100%;
+    background-color: #db8f73;
+}
+
+.upgrade-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3%;
+    row-gap: 10%;
+    padding: 2%;
+}
+
+.upgrade-menu .upgrade-item {
+    background-color: #e8b9a7;
+    border-radius: 10px;
+    padding: 1%;
+    transition: all 0.25s ease-out;
+}
+
+.upgrade-menu .upgrade-item .upgrade-title {
+    font-size: 4vh;
+}
+
+.upgrade-menu .upgrade-item .upgrade-description {
+    font-size: 2vh;
+    color: #c27d9e;
+}
+
+.upgrade-menu .upgrade-item .upgrade-price {
+    font-size: 3vh;
+    text-align: end;
+}
+
+.upgrade-menu .upgrade-item:hover {
+    transform: scale(1.05);
+}
+
+.craft-book-background {
+    height: 100%;
+    width: 100%;
+    background-color: #db8f73;
+    overflow-y: scroll;
+}
+
+.craft-count{
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6vh;
+    background: #d37669;
+}
+
+.craft-list{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    padding: 2%;
+}
+
+.craft-list .craft-item {
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.craft-list .craft-item .item-icon {
+    background-color: #e8b9a7;
+    width: 95%;
+    height: 95%;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.craft-list .craft-item .item-icon img {
+    width: 70%;
+    height: 70%;
+}
+
+.craft-list .craft-item .item-icon div {
+    font-size: 2vh;
+    text-align: center;
+}
+
+/* .craft-list .craft-item .item-icon:hover {
+    transform: scale(1.05);
+} */

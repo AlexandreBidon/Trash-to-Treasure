@@ -1,0 +1,217 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Preahvihear&display=swap" rel="stylesheet">
+        <script type="module" src="./script.js"></script>
+        <script type="text/javascript" src="./services/utils.js"></script>
+        <script src="./components/Header/Header.js"></script>
+        <script src="./components/Header/components/moneyPanel.js"></script>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+
+        <div id="loading" class="main">
+            <div class="loading-screen">
+                LOADING...
+            </div>
+        </div>
+
+        <div id="start_menu" class="main" style="display:none;position:relative">
+            <!-- <div class="start-character">
+                <img src="./img/character/main.png"/>
+            </div> -->
+            <div class="title">
+                <img draggable="false" src="./img/title.png"/>
+            </div>
+            <div class="start_center" onclick="displayScene('how_to_play')">
+                START
+            </div>
+            <div class="start-backdrop">
+
+            </div>
+        </div>
+
+        <div id="how_to_play" class="main" style="display:none;position:relative">
+            <div class="page_title">
+                How to Play:
+            </div>
+            <div class="info_panel">
+                <div class="row">
+                    <div class="section">
+                        <div class="picture">
+                            <img draggable="false" src="./img/tutorial/buy_trashcan.png">
+                        </div>
+                        <div class="text">
+                            <div class="title">
+                                1 - Buy some trash !
+                            </div>
+                            <div class="description">
+                                Buy trashcans to earn new trash. You can find different trash in each type of can!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="picture">
+                            <img draggable="false" src="./img/tutorial/craft_sell.png">
+                        </div>
+                        <div class="text">
+                            <div class="title">
+                                2 - Craft and Sell Art !
+                            </div>
+                            <div class="description">
+                                Assemble the trash you just found into magnificent art! 
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="section">
+                        <div class="picture">
+                            <img draggable="false" src="./img/tutorial/craft_book.png">
+                        </div>
+                        <div class="text">
+                            <div class="title">
+                                3 - See all the crafts you've found
+                            </div>
+                            <div class="description">
+                                You can see all the craft you have found in the artbook of the gallery. You can also buy hint for new craft.
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="picture">
+                            <img draggable="false" src="./img/tutorial/upgrade.png">
+                        </div>
+                        <div class="text">
+                            <div class="title">
+                                4 - Upgrade your gallery
+                            </div>
+                            <div class="description">
+                                Once you have generated a nice profit, you can buy upgrades for the gallery! This visually improves the gallery and brings bonuses.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="play_button" onclick="displayScene('museum')">
+                Play !
+            </div>
+        </div>
+
+
+
+        <div id="museum" class="main" style="display:none">
+            <div class="header_menu">
+                <div class="header_left">
+                    <money-panel/>
+                </div>
+                <div class="header_right">
+                    <div class="header_button" onclick="displayScene('how_to_play')">
+                        How to play
+                    </div>
+                </div>
+            </div>
+            <div class="main_museum">
+                <div class="trash-area clikeable_area" onclick="displayScene('trash_loot')">
+                    <p class="text">Buy some Trash</p>
+                    <img draggable="false" class="upgrade-backdrop" id="upgrade-trash" src="./img/gallery/gold_trash.png">
+                    <img draggable="false" class="backdrop" src="./img/gallery/trash.png">
+                </div>
+                <div class="wall-area" >
+                    <img draggable="false" class="backdrop" src="./img/gallery/wall.png">
+                </div>
+                <div class="desk-area clikeable_area" onclick="displayScene('art_craft')">
+                    <p class="text">Craft new art piece</p>
+                    <img draggable="false" class="upgrade-backdrop" id="upgrade-desk" src="./img/gallery/aquarium-desk.png">
+                    <img draggable="false" class="backdrop" src="./img/gallery/desk.png">
+                </div>
+                <div class="craft-book-area clikeable_area" onclick="displayScene('craft_book')">
+                    <p class="text">See all the craft</p>
+                    <img draggable="false" class="backdrop" src="./img/gallery/book-stand.png">
+                </div>
+                <div class="upgrade-area clikeable_area" onclick="displayScene('upgrade_gallery')">
+                    <p class="text">Upgrade the gallery</p>
+                    <img draggable="false" class="backdrop" src="./img/gallery/upgrade.png">
+                </div>
+                <div class="trash-area-tree" id="upgrade-tree">
+                    <img draggable="false" class="backdrop" src="./img/gallery/trash-tree.png">
+                </div>
+                <div class="trash-area-light" id="upgrade-light">
+                    <img draggable="false" class="backdrop" src="./img/gallery/trash-light.png">
+                </div>
+                <div class="modern-painting" id="modern-painting">
+                    <img draggable="false" class="backdrop" src="./img/gallery/modern-painting.png">
+                </div>
+                <div class="three-d-painting" id="3d-painting">
+                    <img draggable="false" class="backdrop" src="./img/gallery/3d-painting.png">
+                </div>
+                <div class="carpet" id="upgrade-carpet">
+                    <img draggable="false" class="backdrop" src="./img/gallery/carpet.png">
+                </div>
+                <div class="pirate-painting" id="upgrade-pirate-painting">
+                    <img draggable="false" class="backdrop" src="./img/gallery/pirate-painting.png">
+                </div>
+                <div class="desk-area-raccoon">
+                    <img draggable="false" class="backdrop" src="./img/character/main.png">
+                </div>
+                <img draggable="false" class="backdrop" src="./img/gallery/main.png">
+            </div>
+        </div>
+
+
+
+        <div id="art_craft" class="main" style="display:none">
+            <custom-header></custom-header>
+            <div class="main_area_canvas">
+                <div class="area-name">
+                    <div class="area-title">Inventory</div>
+                    <div class="area-title">Crafting</div>
+                </div>
+                <div class="art_area_split">
+                    <div class="split_area">
+                        <div id="inventory-place" class="inventory-background">
+                            <div class="inventory">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="split_area">
+                        <canvas id="craft-canvas">
+
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="craft_book" class="main" style="display:none">
+            <custom-header></custom-header>
+            <div class="main_area_canvas">
+                <div id="craft-book-place" class="craft-book-background">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div id="trash_loot" class="main" style="display:none">
+            <custom-header></custom-header>
+            <div class="main_area_canvas">
+                <canvas id="trash-loot-canvas">
+
+                </canvas>
+            </div>
+        </div>
+
+        <div id="upgrade_gallery" class="main" style="display:none">
+            <custom-header></custom-header>
+            <div class="main_area_canvas">
+                <div id="upgrade-place" class="upgrade-background">
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
