@@ -64,6 +64,10 @@
     font-size: 4vw;
 }
 
+money-panel {
+    height: 100%;
+}
+
 #start_menu {
     background-color: #bd6054;
 }
